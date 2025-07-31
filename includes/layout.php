@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= isset($pageTitle) ? "{$pageTitle} - " : '' ?>MES PHP</title>
+    <title><?= isset($pageTitle) ? "{$pageTitle} - " : '' ?>Gestionale PHP</title>
     <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
     <header class="main-header">
         <nav class="main-nav">
-            <a href="/" class="logo">MES PHP</a>
+            <a href="/" class="logo">Gestionale PHP</a>
             <ul class="nav-links">
                 <li><a href="/" class="<?= $router->getCurrentPath() === '/' ? 'active' : '' ?>">Home</a></li>
                 <li><a href="/users" class="<?= $router->getCurrentPath() === '/users' ? 'active' : '' ?>">Utenti</a></li>
@@ -26,7 +26,7 @@
     </main>
 
     <footer class="main-footer">
-        <p>&copy; 2025 MES PHP - Sistema di Gestione</p>
+        <p>&copy; 2025 Gestionale PHP - Sistema di Gestione</p>
     </footer>
 </body>
 

@@ -1,6 +1,6 @@
-# MES PHP - Sistema di Gestione
+# Gestionale PHP - Sistema di Gestione
 
-Un sistema di gestione aziendale (MES) costruito in PHP puro con routing personalizzato e gestione variabili d'ambiente.
+Un sistema di gestione aziendale costruito in PHP puro con routing personalizzato e gestione variabili d'ambiente.
 
 ## Caratteristiche
 

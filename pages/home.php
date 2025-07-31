@@ -3,7 +3,7 @@ require_once 'db.php';
 ?>
 
 <div class="page-content">
-    <h1>Benvenuto nel tuo MES PHP!</h1>
+    <h1>Benvenuto nel tuo Gestionale PHP!</h1>
     <p>Questo è un sistema di gestione semplice con routing.</p>
 
     <div class="navigation-cards">

@@ -104,7 +104,7 @@ DB_USER=root
 DB_PASS=
 
 # Configurazione Applicazione
-APP_NAME="MES PHP"
+APP_NAME="Gestionale PHP"
 APP_URL=http://localhost:8000
 APP_DEBUG=true
 APP_ENV=development
