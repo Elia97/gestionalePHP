@@ -16,6 +16,7 @@
                 <li><a href="/" class="<?= $router->getCurrentPath() === '/' ? 'active' : '' ?>">Home</a></li>
                 <li><a href="/users" class="<?= $router->getCurrentPath() === '/users' ? 'active' : '' ?>">Utenti</a></li>
                 <li><a href="/customers" class="<?= $router->getCurrentPath() === '/customers' ? 'active' : '' ?>">Clienti</a></li>
+                <li><a href="/products" class="<?= $router->getCurrentPath() === '/products' ? 'active' : '' ?>">Prodotti</a></li>
             </ul>
         </nav>
     </header>

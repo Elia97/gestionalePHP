@@ -25,5 +25,9 @@ $router->addRoute('/customers', function () use ($router) {
     renderPage('pages/customers.php', 'Clienti', $router);
 });
 
+$router->addRoute('/products', function () use ($router) {
+    renderPage('pages/products.php', 'Prodotti', $router);
+});
+
 // Avvia il routing
 $router->route();
