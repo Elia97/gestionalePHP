@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# Reindirizza tutte le richieste che non sono file esistenti o directory all'index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
+
+# Impedisci l'accesso diretto ai file PHP nelle directory protette
+RewriteCond %{REQUEST_URI} ^/(pages|includes)/.*\.php$
+RewriteRule ^.*$ - [F,L]

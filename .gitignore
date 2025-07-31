@@ -1,0 +1,248 @@
+# =======================
+# PHP MES - .gitignore
+# =======================
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Keep example file
+!.env.example
+
+# =======================
+# PHP Files
+# =======================
+
+# Composer
+/vendor/
+composer.lock
+composer.phar
+
+# PHPUnit
+/phpunit.xml
+/phpunit.xml.dist
+/.phpunit.cache
+/coverage/
+
+# PHP CS Fixer
+/.php_cs.cache
+/.php-cs-fixer.cache
+
+# =======================
+# Logs & Temporary Files
+# =======================
+
+# Application logs
+/logs/
+*.log
+
+# Temporary files
+/tmp/
+/temp/
+*.tmp
+
+# Cache directories
+/cache/
+/storage/cache/
+
+# Session files
+/sessions/
+*.sess
+
+# =======================
+# Database
+# =======================
+
+# SQLite databases
+*.sqlite
+*.sqlite3
+*.db
+
+# Database dumps
+*.sql.gz
+*.sql.bak
+backup_*.sql
+
+# Database connection files (if any)
+database.ini
+db_config.ini
+
+# =======================
+# IDE & Editor Files
+# =======================
+
+# Visual Studio Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# PhpStorm
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+
+# =======================
+# Operating System
+# =======================
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# =======================
+# Web Server Files
+# =======================
+
+# Apache
+.htaccess.bak
+error_log
+access_log
+
+# Nginx
+nginx.conf.bak
+
+# =======================
+# Development Tools
+# =======================
+
+# Node.js (se usi tools JS)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Webpack/Build tools
+/dist/
+/build/
+*.bundle.js
+*.bundle.css
+
+# =======================
+# Security & Sensitive Data
+# =======================
+
+# Private keys
+*.pem
+*.key
+*.p12
+*.pfx
+
+# SSL certificates
+*.crt
+*.cer
+
+# Configuration files with secrets
+config_local.php
+secrets.php
+private_config.php
+
+# =======================
+# Backup & Archive Files
+# =======================
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# Backup files
+*.bak
+*.backup
+*.old
+*_backup
+backup_*
+
+# =======================
+# Media & Uploads
+# =======================
+
+# Large media files (uncomment if needed)
+# *.mp4
+# *.avi
+# *.mov
+# *.mp3
+# *.wav
+
+# User uploads (uncomment if you have an uploads directory)
+# /uploads/
+# /files/
+# /media/
+
+# =======================
+# Documentation
+# =======================
+
+# Keep documentation but ignore generated docs
+# /docs/build/
+# /docs/_build/
+
+# =======================
+# Testing
+# =======================
+
+# Test coverage
+/coverage/
+coverage.xml
+clover.xml
+
+# Test databases
+test.db
+test.sqlite
+
+# =======================
+# Custom Project Files
+# =======================
+
+# Add any project-specific files here
+# /custom_config/
+# local_settings.php
