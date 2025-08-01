@@ -24,4 +24,11 @@ require_once 'db.php';
             <p>Visualizza e gestisci i prodotti</p>
             <a href="/products" class="btn">Vai ai Prodotti</a>
         </div>
+
+        <div class="card">
+            <h3>🏬 Gestione Magazzini</h3>
+            <p>Visualizza e gestisci i magazzini</p>
+            <a href="/warehouses" class="btn">Vai ai Magazzini</a>
+        </div>
     </div>
+</div>

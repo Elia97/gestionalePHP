@@ -29,5 +29,9 @@ $router->addRoute('/products', function () use ($router) {
     renderPage('pages/products.php', 'Prodotti', $router);
 });
 
+$router->addRoute('/warehouses', function () use ($router) {
+    renderPage('pages/warehouses.php', 'Magazzini', $router);
+});
+
 // Avvia il routing
 $router->route();
