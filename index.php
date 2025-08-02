@@ -30,7 +30,7 @@ $router->addRoute('/products', function () use ($router) {
 });
 
 $router->addRoute('/warehouses', function () use ($router) {
-    renderPage('pages/warehouses.php', 'Magazzini', $router);
+    renderPage('pages/warehouses.php', 'Magazzini', $router, 'warehouses', 'warehouses');
 });
 
 // Avvia il routing

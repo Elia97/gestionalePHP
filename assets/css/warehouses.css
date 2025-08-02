@@ -1,0 +1,181 @@
+/* Stili specifici per la pagina Magazzini */
+
+/* === WAREHOUSE LAYOUT === */
+.warehouse-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.warehouse-header h3 {
+  color: #2c3e50;
+  margin: 0 0 1rem 0;
+}
+
+.warehouse-stats {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.warehouse-info {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.warehouse-actions {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e9ecef;
+  text-align: center;
+}
+
+/* === STOCKS (GIACENZE) === */
+.stocks-details {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 6px;
+  border: 1px solid #e9ecef;
+  text-align: left;
+}
+
+.stocks-details h4 {
+  margin: 0 0 1rem 0;
+  color: #495057;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.stocks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.stock-item {
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 0.75rem;
+  transition: box-shadow 0.2s ease;
+}
+
+.stock-item:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.stock-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.stock-product {
+  flex: 1;
+  text-align: left;
+}
+
+.stock-product strong {
+  display: block;
+  color: #2c3e50;
+  margin-bottom: 0.25rem;
+  font-size: 0.95rem;
+}
+
+.stock-product code {
+  background: #e9ecef;
+  padding: 0.125rem 0.375rem;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  color: #495057;
+}
+
+.stock-value {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+}
+
+.stock-value .quantity {
+  background: #e3f2fd;
+  color: #1976d2;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.stock-value .total-value {
+  background: #d4edda;
+  color: #155724;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.stock-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #6c757d;
+  padding-top: 0.5rem;
+  border-top: 1px solid #f1f3f4;
+}
+
+.stock-details .price {
+  font-weight: 500;
+}
+
+.stock-details .date {
+  font-style: italic;
+}
+
+.no-stocks {
+  color: #6c757d;
+  font-style: italic;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+/* === RESPONSIVE OVERRIDES === */
+@media (max-width: 768px) {
+  .warehouse-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .warehouse-stats {
+    justify-content: center;
+  }
+
+  .stock-main {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .stock-value {
+    align-items: flex-start;
+  }
+
+  .stock-details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .stock-product {
+    text-align: center;
+  }
+}

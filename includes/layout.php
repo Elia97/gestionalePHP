@@ -5,7 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= isset($pageTitle) ? "{$pageTitle} - " : '' ?>Gestionale PHP</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/common.css">
+
+    <?php
+    // Carica CSS specifico per pagina se esiste
+    if (isset($pageCSS) && !empty($pageCSS)) {
+        foreach ((array)$pageCSS as $css) {
+            echo "<link rel=\"stylesheet\" href=\"/assets/css/{$css}.css\">\n    ";
+        }
+    }
+    ?>
 </head>
 
 <body>
@@ -29,6 +39,15 @@
     <footer class="main-footer">
         <p>&copy; 2025 Gestionale PHP - Sistema di Gestione</p>
     </footer>
+
+    <?php
+    // Carica JavaScript specifico per pagina se esiste
+    if (isset($pageJS) && !empty($pageJS)) {
+        foreach ((array)$pageJS as $js) {
+            echo "<script src=\"/assets/js/{$js}.js\"></script>\n    ";
+        }
+    }
+    ?>
 </body>
 
 </html>
