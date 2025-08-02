@@ -98,26 +98,26 @@ class Env
     private static function createExampleEnv($path)
     {
         $example = '# Configurazione Database
-DB_HOST=localhost
-DB_NAME=mes_database
-DB_USER=root
-DB_PASS=
+DB_HOST=your_database_host
+DB_NAME=your_database_name
+DB_USER=your_database_user
+DB_PASS=your_database_password
 
 # Configurazione Applicazione
-APP_NAME="Gestionale PHP"
-APP_URL=http://localhost:8000
+APP_NAME=your_app_name
+APP_URL=your_app_url
 APP_DEBUG=true
 APP_ENV=development
 
 # Configurazione Mail (opzionale)
-MAIL_HOST=smtp.gmail.com
-MAIL_PORT=587
-MAIL_USERNAME=
-MAIL_PASSWORD=
+MAIL_HOST=your_mail_host
+MAIL_PORT=your_mail_port
+MAIL_USERNAME=your_mail_username
+MAIL_PASSWORD=your_mail_password
 
 # Chiavi API (opzionale)
-API_KEY=
-SECRET_KEY=
+API_KEY=your_api_key
+SECRET_KEY=your_secret_key
 ';
 
         file_put_contents($path, $example);
