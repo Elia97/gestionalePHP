@@ -9,11 +9,6 @@
   margin-bottom: 1rem;
 }
 
-.warehouse-header h3 {
-  color: #2c3e50;
-  margin: 0 0 1rem 0;
-}
-
 .warehouse-stats {
   display: flex;
   gap: 0.5rem;
@@ -32,7 +27,6 @@
   margin-top: 1rem;
   padding-top: 1rem;
   border-top: 1px solid #e9ecef;
-  text-align: center;
 }
 
 /* === STOCKS (GIACENZE) === */
@@ -49,7 +43,6 @@
   margin: 0 0 1rem 0;
   color: #495057;
   font-size: 1.1rem;
-  text-align: center;
 }
 
 .stocks-list {

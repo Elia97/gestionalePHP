@@ -1,0 +1,117 @@
+/* === STILI GENERICI PAGINE === */
+/* Stili che possono essere riutilizzati in più progetti */
+
+/* === USER INFO E CUSTOMER INFO === */
+.user-info p,
+.customer-info p {
+  margin-bottom: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.user-info,
+.customer-info {
+  background: var(--color-white);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--color-gray-200);
+}
+
+/* === ERROR PAGE === */
+.error-page {
+  text-align: center;
+  padding: var(--spacing-3xl) var(--spacing-xl);
+  background: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.error-page h1 {
+  color: var(--color-error);
+  font-size: var(--font-size-4xl);
+  margin-bottom: var(--spacing-lg);
+}
+
+.error-page p {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.error-actions {
+  margin-top: var(--spacing-xl);
+}
+
+/* === TABELLE GENERICHE === */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--color-white);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.data-table th,
+.data-table td {
+  padding: var(--spacing-md);
+  text-align: left;
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.data-table th {
+  background: var(--color-gray-50);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+}
+
+.data-table tr:hover {
+  background: var(--color-gray-50);
+}
+
+/* === LISTE GENERICHE === */
+.data-list {
+  background: var(--color-white);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.data-list-item {
+  padding: var(--spacing-lg);
+  border-bottom: 1px solid var(--color-gray-200);
+  transition: var(--transition-colors);
+}
+
+.data-list-item:last-child {
+  border-bottom: none;
+}
+
+.data-list-item:hover {
+  background: var(--color-gray-50);
+}
+
+/* === BREADCRUMBS === */
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-lg);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.breadcrumbs a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: var(--transition-colors);
+}
+
+.breadcrumbs a:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}
+
+.breadcrumbs-separator {
+  color: var(--color-text-muted);
+}

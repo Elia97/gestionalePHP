@@ -37,7 +37,7 @@ require_once 'db.php';
             <?php foreach ($warehouses as $warehouse): ?>
                 <div class="data-card warehouse-card">
                     <div class="warehouse-header">
-                        <h3><?= htmlspecialchars($warehouse['warehouse_name']) ?></h3>
+                        <h3 class="mb-2"><?= htmlspecialchars($warehouse['warehouse_name']) ?></h3>
                         <div class="warehouse-stats">
                             <span class="stat-badge">
                                 <?= $warehouse['total_stocks'] ?> prodotti
@@ -64,7 +64,7 @@ require_once 'db.php';
                         </div>
 
                         <div id="stocks-<?= $warehouse['warehouse_id'] ?>" class="stocks-details" style="display: none;">
-                            <h4>Giacenze dettagliate</h4>
+                            <h4 class="text-center">Giacenze dettagliate</h4>
                             <?php
                             // Query per ottenere le giacenze dettagliate di questo magazzino
                             $stocksQuery = "

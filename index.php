@@ -14,7 +14,7 @@ $router = new Router();
 
 // Definisci le route
 $router->addRoute('/', function () use ($router) {
-    renderPage('pages/home.php', 'Home', $router);
+    renderPage('pages/home.php', 'Home', $router, 'homepage');
 });
 
 $router->addRoute('/users', function () use ($router) {

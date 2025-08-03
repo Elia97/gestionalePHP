@@ -32,7 +32,7 @@ function getDefaultNavigationCards()
         [
             'icon' => '👥',
             'title' => 'Gestione Utenti',
-            'description' => 'Visualizza e gestisci gli utenti del sistema',
+            'description' => 'Visualizza e gestisci gli utenti',
             'link' => '/users',
             'button_text' => 'Vai agli Utenti'
         ],

@@ -1,0 +1,59 @@
+/* === STILI HOMEPAGE === */
+/* Stili specifici per la pagina home del gestionale */
+
+/* === NAVIGATION CARDS === */
+.navigation-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-xl);
+  flex: 1;
+  align-content: center;
+}
+
+/* === STATS GRID === */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+/* === SEZIONI HOMEPAGE === */
+.navigation-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.activity-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+/* === ACTIVITY FEED === */
+.activity-feed {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+/* === RESPONSIVE HOMEPAGE === */
+@media (max-width: 768px) {
+  .navigation-cards {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .navigation-cards {
+    gap: var(--spacing-md);
+  }
+}

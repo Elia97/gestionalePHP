@@ -3,7 +3,7 @@ require_once 'db.php';
 ?>
 
 <div class="page-content">
-    <h1>👥 Lista Utenti</h1>
+    <h1>Lista Utenti</h1>
     <nav class="breadcrumb">
         <a href="/">Home</a> > <span>Utenti</span>
     </nav>
