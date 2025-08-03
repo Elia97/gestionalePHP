@@ -15,12 +15,6 @@ require_once 'components/layout_components.php';
         'center'
     );
 
-    // Stats cards
-    startSection();
-    renderSectionHeader('Statistiche del Sistema', 'Panoramica delle metriche principali');
-    statsCards($pdo);
-    endSection();
-
     // Sezione di navigazione principale
     startSection('navigation-section');
     renderSectionHeader(
@@ -28,6 +22,12 @@ require_once 'components/layout_components.php';
         'Accedi rapidamente alle funzionalità principali del sistema.'
     );
     navigation_cards(); // Usa le carte predefinite
+    endSection();
+
+    // Stats cards
+    startSection();
+    renderSectionHeader('Statistiche del Sistema', 'Panoramica delle metriche principali');
+    statsCards($pdo);
     endSection();
 
     // Sezione attività recenti

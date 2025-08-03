@@ -8,6 +8,7 @@
 
 /* === MODULI CSS === */
 @import url("modules/layout.css"); /* Stili di base, reset e layout */
+@import url("modules/typography.css"); /* Sistema tipografico */
 @import url("modules/containers.css"); /* Sistema container e responsive */
 @import url("modules/components.css"); /* Card, badge, breadcrumb */
 @import url("modules/buttons.css"); /* Sistema di bottoni */

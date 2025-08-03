@@ -18,15 +18,15 @@ $router->addRoute('/', function () use ($router) {
 });
 
 $router->addRoute('/users', function () use ($router) {
-    renderPage('pages/users.php', 'Utenti', $router);
+    renderPage('pages/users.php', 'Utenti', $router, 'users');
 });
 
 $router->addRoute('/customers', function () use ($router) {
-    renderPage('pages/customers.php', 'Clienti', $router);
+    renderPage('pages/customers.php', 'Clienti', $router, 'customers');
 });
 
 $router->addRoute('/products', function () use ($router) {
-    renderPage('pages/products.php', 'Prodotti', $router);
+    renderPage('pages/products.php', 'Prodotti', $router, 'products');
 });
 
 $router->addRoute('/warehouses', function () use ($router) {

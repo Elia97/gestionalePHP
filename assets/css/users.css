@@ -1,0 +1,81 @@
+/* === STILI PAGINA UTENTI === */
+
+/* === USERS GRID === */
+.users-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+}
+
+.user-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-all);
+  position: relative;
+  overflow: hidden;
+}
+
+.user-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--color-secondary),
+    var(--color-success)
+  );
+  transform: translateX(-100%);
+  transition: var(--transition-all);
+}
+
+.user-card:hover::before {
+  transform: translateX(0);
+}
+
+.user-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.user-card h3 {
+  color: var(--color-primary);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-md);
+}
+
+/* === USER INFO === */
+.user-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .users-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .user-card {
+    padding: var(--spacing-md);
+  }
+}
+
+/* === PAGE ACTIONS === */
+.page-actions {
+  margin-top: var(--spacing-xl);
+  padding: var(--spacing-lg) 0;
+  border-top: 1px solid var(--color-gray-200);
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+}

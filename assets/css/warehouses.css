@@ -1,4 +1,66 @@
-/* Stili specifici per la pagina Magazzini */
+/* === STILI PAGINA MAGAZZINI === */
+
+/* === WAREHOUSES GRID === */
+.warehouses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+}
+
+/* === WAREHOUSE CARDS === */
+.warehouse-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-all);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.warehouse-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--color-secondary),
+    var(--color-success)
+  );
+  transform: translateX(-100%);
+  transition: var(--transition-all);
+}
+
+.warehouse-card:hover::before {
+  transform: translateX(0);
+}
+
+.warehouse-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.warehouse-card h3 {
+  color: var(--color-primary);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-md);
+}
+
+/* === WAREHOUSE INFO === */
+.warehouse-info {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+}
 
 /* === WAREHOUSE LAYOUT === */
 .warehouse-header {
@@ -6,68 +68,60 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-md);
 }
 
 .warehouse-stats {
   display: flex;
-  gap: 0.5rem;
+  gap: var(--spacing-sm);
   flex-wrap: wrap;
 }
 
-.warehouse-info {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
 .warehouse-actions {
-  margin-top: 1rem;
-  padding-top: 1rem;
-  border-top: 1px solid #e9ecef;
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--color-gray-200);
 }
 
 /* === STOCKS (GIACENZE) === */
 .stocks-details {
-  margin-top: 1rem;
-  padding: 1rem;
-  background: #f8f9fa;
-  border-radius: 6px;
-  border: 1px solid #e9ecef;
+  margin-top: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: var(--color-gray-50);
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--color-gray-200);
   text-align: left;
 }
 
 .stocks-details h4 {
-  margin: 0 0 1rem 0;
-  color: #495057;
-  font-size: 1.1rem;
+  margin: 0 0 var(--spacing-md) 0;
+  color: var(--color-gray-700);
+  font-size: var(--font-size-lg);
 }
 
 .stocks-list {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: var(--spacing-sm);
 }
 
 .stock-item {
-  background: white;
-  border: 1px solid #dee2e6;
-  border-radius: 6px;
-  padding: 0.75rem;
-  transition: box-shadow 0.2s ease;
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-sm);
+  transition: var(--transition-all);
 }
 
 .stock-item:hover {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-md);
 }
 
 .stock-main {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--spacing-sm);
 }
 
 .stock-product {
@@ -77,56 +131,56 @@
 
 .stock-product strong {
   display: block;
-  color: #2c3e50;
-  margin-bottom: 0.25rem;
-  font-size: 0.95rem;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-xs);
+  font-size: var(--font-size-sm);
 }
 
 .stock-product code {
-  background: #e9ecef;
-  padding: 0.125rem 0.375rem;
-  border-radius: 3px;
-  font-size: 0.8rem;
-  color: #495057;
+  background: var(--color-gray-200);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-700);
 }
 
 .stock-value {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 0.25rem;
+  gap: var(--spacing-xs);
 }
 
 .stock-value .quantity {
-  background: #e3f2fd;
-  color: #1976d2;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-  font-size: 0.875rem;
-  font-weight: 600;
+  background: var(--color-info-light);
+  color: var(--color-info-dark);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
 }
 
 .stock-value .total-value {
-  background: #d4edda;
-  color: #155724;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-  font-size: 0.875rem;
-  font-weight: 600;
+  background: var(--color-success-light);
+  color: var(--color-success-dark);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
 }
 
 .stock-details {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.8rem;
-  color: #6c757d;
-  padding-top: 0.5rem;
-  border-top: 1px solid #f1f3f4;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid var(--color-gray-100);
 }
 
 .stock-details .price {
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
 }
 
 .stock-details .date {
@@ -134,17 +188,17 @@
 }
 
 .no-stocks {
-  color: #6c757d;
+  color: var(--color-text-secondary);
   font-style: italic;
-  margin: 0.5rem 0;
+  margin: var(--spacing-sm) 0;
   text-align: center;
 }
 
-/* === RESPONSIVE OVERRIDES === */
+/* === RESPONSIVE === */
 @media (max-width: 768px) {
   .warehouse-header {
     flex-direction: column;
-    gap: 1rem;
+    gap: var(--spacing-md);
     align-items: stretch;
     text-align: center;
   }
@@ -155,7 +209,7 @@
 
   .stock-main {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: var(--spacing-sm);
   }
 
   .stock-value {
@@ -165,10 +219,20 @@
   .stock-details {
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.25rem;
+    gap: var(--spacing-xs);
   }
 
   .stock-product {
     text-align: center;
   }
+}
+
+/* === PAGE ACTIONS === */
+.page-actions {
+  margin-top: var(--spacing-xl);
+  padding: var(--spacing-lg) 0;
+  border-top: 1px solid var(--color-gray-200);
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
 }

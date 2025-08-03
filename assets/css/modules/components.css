@@ -270,7 +270,6 @@
   color: var(--color-text-secondary);
   font-size: var(--font-size-lg);
   line-height: var(--line-height-relaxed);
-  max-width: 42rem;
 }
 
 /* === ACTIVITY FEED === */
@@ -340,6 +339,31 @@
 .activity-item .activity-icon.danger {
   background: var(--color-danger);
   color: var(--color-white);
+}
+
+/* === BREADCRUMBS === */
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-lg);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.breadcrumbs a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: var(--transition-colors);
+}
+
+.breadcrumbs a:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}
+
+.breadcrumbs-separator {
+  color: var(--color-text-muted);
 }
 
 .breadcrumb a {

@@ -33,9 +33,9 @@ require_once 'db.php';
             <a href="/" class="btn">Torna alla Home</a>
         </div>
     <?php else: ?>
-        <div class="data-grid">
+        <div class="warehouses-grid">
             <?php foreach ($warehouses as $warehouse): ?>
-                <div class="data-card warehouse-card">
+                <div class="warehouse-card">
                     <div class="warehouse-header">
                         <h3 class="mb-2"><?= htmlspecialchars($warehouse['warehouse_name']) ?></h3>
                         <div class="warehouse-stats">

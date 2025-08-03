@@ -17,9 +17,9 @@ require_once 'db.php';
             <a href="/" class="btn">Torna alla Home</a>
         </div>
     <?php else: ?>
-        <div class="data-grid">
+        <div class="products-grid">
             <?php foreach ($products as $product): ?>
-                <div class="data-card">
+                <div class="product-card">
                     <h3><?= htmlspecialchars($product['code']) ?></h3>
                     <div class="product-info">
                         <p><strong>Nome:</strong> <?= htmlspecialchars($product['name']) ?></p>

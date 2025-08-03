@@ -17,9 +17,9 @@ require_once 'db.php';
             <a href="/" class="btn">Torna alla Home</a>
         </div>
     <?php else: ?>
-        <div class="data-grid">
+        <div class="users-grid">
             <?php foreach ($users as $user): ?>
-                <div class="data-card">
+                <div class="user-card">
                     <h3><?= htmlspecialchars($user['firstName'] . ' ' . $user['lastName']) ?></h3>
                     <div class="user-info">
                         <p><strong>Email:</strong> <?= htmlspecialchars($user['email']) ?></p>
@@ -31,6 +31,5 @@ require_once 'db.php';
 
     <div class="page-actions">
         <a href="/" class="btn btn-secondary">← Torna alla Home</a>
-        <a href="/customers" class="btn">Vai ai Clienti →</a>
     </div>
 </div>

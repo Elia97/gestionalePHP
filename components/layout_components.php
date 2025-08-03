@@ -8,7 +8,7 @@
  */
 function renderSectionHeader($title, $description = '', $alignment = 'left')
 {
-    $alignmentClass = $alignment === 'center' ? ' text-center' : '';
+    $alignmentClass = $alignment === 'center' ? ' text-center' : ($alignment === 'right' ? ' text-right' : ' text-left');
 ?>
     <div class="section-header<?php echo $alignmentClass; ?>">
         <h2><?php echo htmlspecialchars($title); ?></h2>
@@ -27,7 +27,7 @@ function renderSectionHeader($title, $description = '', $alignment = 'left')
  */
 function renderPageHeader($title, $description = '', $alignment = 'left')
 {
-    $alignmentClass = $alignment === 'center' ? ' text-center' : '';
+    $alignmentClass = $alignment === 'center' ? ' text-center' : ($alignment === 'right' ? ' text-right' : ' text-left');
 ?>
     <div class="section-header<?php echo $alignmentClass; ?>">
         <h1><?php echo htmlspecialchars($title); ?></h1>
@@ -46,7 +46,7 @@ function renderPageHeader($title, $description = '', $alignment = 'left')
  */
 function renderSubsectionHeader($title, $description = '', $alignment = 'left')
 {
-    $alignmentClass = $alignment === 'center' ? ' text-center' : '';
+    $alignmentClass = $alignment === 'center' ? ' text-center' : ($alignment === 'right' ? ' text-right' : ' text-left');
 ?>
     <div class="section-header<?php echo $alignmentClass; ?>">
         <h3><?php echo htmlspecialchars($title); ?></h3>
