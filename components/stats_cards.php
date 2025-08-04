@@ -130,6 +130,53 @@ function advancedStatsCards($pdo = null)
 }
 
 /**
+ * Restituisce le statistiche dal database usando DatabaseManager
+ * @return array Array delle statistiche
+ */
+function getStatsFromDatabaseManager()
+{
+    $stats = [];
+
+    // Conta utenti totali
+    $userCount = DatabaseManager::fetchValue("SELECT COUNT(*) FROM users") ?? 0;
+    $stats[] = [
+        'title' => 'Utenti Totali',
+        'value' => number_format($userCount),
+        'icon' => '👥',
+        'type' => ''
+    ];
+
+    // Conta prodotti
+    $productCount = DatabaseManager::fetchValue("SELECT COUNT(*) FROM products") ?? 0;
+    $stats[] = [
+        'title' => 'Prodotti',
+        'value' => number_format($productCount),
+        'icon' => '📦',
+        'type' => 'success'
+    ];
+
+    // Conta magazzini
+    $warehouseCount = DatabaseManager::fetchValue("SELECT COUNT(*) FROM warehouses") ?? 0;
+    $stats[] = [
+        'title' => 'Magazzini',
+        'value' => number_format($warehouseCount),
+        'icon' => '🏪',
+        'type' => 'warning'
+    ];
+
+    // Conta clienti
+    $customerCount = DatabaseManager::fetchValue("SELECT COUNT(*) FROM customers") ?? 0;
+    $stats[] = [
+        'title' => 'Clienti',
+        'value' => number_format($customerCount),
+        'icon' => '🤝',
+        'type' => 'info'
+    ];
+
+    return $stats;
+}
+
+/**
  * Restituisce le statistiche dal database
  * @param PDO $pdo Connessione al database
  * @return array Array delle statistiche
@@ -223,11 +270,17 @@ function getDefaultStats()
 
 /**
  * Renderizza le statistiche dal database
- * @param PDO|null $pdo Connessione al database (opzionale)
  */
-function statsCards($pdo = null)
+function statsCards()
 {
-    $stats = $pdo ? getStatsFromDatabase($pdo) : getDefaultStats();
+    require_once __DIR__ . '/../orm/DatabaseManager.php';
+
+    try {
+        $stats = getStatsFromDatabaseManager();
+    } catch (Exception $e) {
+        $stats = getDefaultStats();
+    }
+
     renderStatsCards($stats);
 }
 

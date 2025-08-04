@@ -1,5 +1,5 @@
 <?php
-require_once 'db.php';
+require_once 'orm/DatabaseManager.php';
 ?>
 
 <div class="page-content">
@@ -25,7 +25,11 @@ require_once 'db.php';
         ORDER BY w.name
     ";
 
-    $warehouses = $pdo->query($warehousesQuery)->fetchAll(PDO::FETCH_ASSOC);
+    try {
+        $warehouses = DatabaseManager::fetchAll($warehousesQuery);
+    } catch (Exception $e) {
+        $warehouses = [];
+    }
 
     if (empty($warehouses)): ?>
         <div class="empty-state">
@@ -81,10 +85,11 @@ require_once 'db.php';
                                 ORDER BY p.name
                             ";
 
-                            $stmt = $pdo->prepare($stocksQuery);
-                            $stmt->bindParam(':warehouse_id', $warehouse['warehouse_id']);
-                            $stmt->execute();
-                            $stocks = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                            try {
+                                $stocks = DatabaseManager::fetchAll($stocksQuery, [':warehouse_id' => $warehouse['warehouse_id']]);
+                            } catch (Exception $e) {
+                                $stocks = [];
+                            }
                             ?>
 
                             <?php if (!empty($stocks)): ?>

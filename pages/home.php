@@ -1,5 +1,5 @@
 <?php
-require_once 'db.php';
+require_once 'orm/DatabaseManager.php';
 require_once 'components/stats_cards.php';
 require_once 'components/activity_feed.php';
 require_once 'components/navigation_cards.php';
@@ -27,7 +27,7 @@ require_once 'components/layout_components.php';
     // Stats cards
     startSection();
     renderSectionHeader('Statistiche del Sistema', 'Panoramica delle metriche principali');
-    statsCards($pdo);
+    statsCards(); // Ora usa DatabaseManager interno
     endSection();
 
     // Sezione attività recenti

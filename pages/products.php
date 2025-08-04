@@ -1,5 +1,5 @@
 <?php
-require_once 'db.php';
+require_once 'orm/DatabaseManager.php';
 ?>
 
 <div class="page-content">
@@ -9,7 +9,11 @@ require_once 'db.php';
     </nav>
 
     <?php
-    $products = $pdo->query("SELECT * FROM products")->fetchAll(PDO::FETCH_ASSOC);
+    try {
+        $products = DatabaseManager::fetchAll("SELECT * FROM products");
+    } catch (Exception $e) {
+        $products = [];
+    }
 
     if (empty($products)): ?>
         <div class="empty-state">

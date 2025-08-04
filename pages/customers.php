@@ -1,5 +1,5 @@
 <?php
-require_once 'db.php';
+require_once 'orm/DatabaseManager.php';
 ?>
 
 <div class="page-content">
@@ -9,7 +9,11 @@ require_once 'db.php';
     </nav>
 
     <?php
-    $customers = $pdo->query("SELECT * FROM customers")->fetchAll(PDO::FETCH_ASSOC);
+    try {
+        $customers = DatabaseManager::fetchAll("SELECT * FROM customers");
+    } catch (Exception $e) {
+        $customers = [];
+    }
 
     if (empty($customers)): ?>
         <div class="empty-state">

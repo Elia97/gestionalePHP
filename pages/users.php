@@ -1,5 +1,5 @@
 <?php
-require_once 'db.php';
+require_once 'orm/DatabaseManager.php';
 ?>
 
 <div class="page-content">
@@ -9,7 +9,11 @@ require_once 'db.php';
     </nav>
 
     <?php
-    $users = $pdo->query("SELECT * FROM users")->fetchAll(PDO::FETCH_ASSOC);
+    try {
+        $users = DatabaseManager::fetchAll("SELECT * FROM users");
+    } catch (Exception $e) {
+        $users = [];
+    }
 
     if (empty($users)): ?>
         <div class="empty-state">
